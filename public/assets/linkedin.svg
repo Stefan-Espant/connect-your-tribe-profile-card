@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Laag_2" data-name="Laag 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 85 85">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #a0b4f4;
+      }
+    </style>
+  </defs>
+  <g id="Square_Grey" data-name="Square Grey">
+    <g id="Linkedin">
+      <rect id="back" class="cls-2" width="85" height="85" rx="12" ry="12"/>
+      <g id="Linkedin-2" data-name="Linkedin">
+        <path class="cls-1" d="M19.31,34.36h9.87v31.74h-9.87v-31.74Zm4.94-15.78c3.16,0,5.72,2.56,5.72,5.72s-2.56,5.72-5.72,5.72-5.72-2.56-5.72-5.72,2.55-5.72,5.72-5.72"/>
+        <path class="cls-1" d="M35.37,34.36h9.46v4.34h.14c1.32-2.5,4.53-5.13,9.33-5.13,9.99,0,11.83,6.57,11.83,15.12v17.41h-9.86v-15.43c0-3.68-.06-8.42-5.12-8.42s-5.92,4.01-5.92,8.15v15.7h-9.85v-31.74Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
