@@ -1,0 +1,231 @@
+:root {
+    /* animation */
+    --a-quick: 0.2s;
+    --a-default: 0.3s;
+    --a-medium: 0.6s;
+
+    /* color */
+    --c-light: rgb(250, 250, 250);
+    --c-primary-0: rgb(236, 240, 247);
+    --c-primary-25: rgb(192, 217, 255);
+    --c-primary-50: rgb(134, 174, 255);
+    --c-primary-100: rgb(34, 102, 238);
+
+    /* color gradients */
+
+    /* color opactity */
+    --o-primary-0: rgba(236, 240, 247, 0);
+
+    /* layout (vw) */
+    --w-dix: 10vw;
+    --w-quarter: 25vw;  
+    --w-third: 33vw;
+    --w-half: 50vw;
+    --w-full: 100vw;
+    --h-full: 100vh;
+
+    /* units (em) */
+    --u-nano: 0.1em;
+    --u-micro: 0.25em;
+    --u-small: 0.375em;
+    --u-medium: 0.5em;
+    --u-default: 1em;
+    --u-large: 2em;
+}
+
+@import url(./typeface/poppins-regular.ttf);
+@import url();
+
+@font-face {
+    font-family: "poppins-regular", sans-serif;
+    font-style: normal;
+    src: local("poppins-regular")
+    url(./typeface/Poppins-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "poppins", sans-serif;
+    font-style: normal;
+    src:  local("Poppins-semibold") 
+    url(./typeface/Poppins-Semibold.ttf) format("truetype");
+}
+
+/* General settings based on a viewport of 20em / 320px */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "poppins", serif;
+    font-variant-ligatures: common-ligatures;
+}
+
+body {
+    width: var(--w-full);
+    height: var(--h-full);
+    background-image: linear-gradient(to bottom right, var(--c-light), var(--c-primary-25) );
+    background-repeat: no-repeat;
+    padding: var(--u-default);
+    /* overflow: hidden; */
+}
+
+/* Typography */
+
+h1 {
+    font-family: "poppins medium", serif;
+    font-weight: 400;
+    font-size: 2.5em;
+    letter-spacing: -0.02em;
+    line-height: 0.95em;
+}
+
+h2 {
+    font-family: "poppins medium", serif;
+    font-weight: 400;
+    background: -webkit-linear-gradient(var(--c-primary-100) 33%, var(--c-primary-50)); 
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    font-family: "neuzeit-grotesk", sans-serif;
+    font-weight: 300;
+    font-size: var(--u-default);
+    padding-left: var(--u-micro);
+    padding-bottom: var(--u-default);
+    color: #213c72; 
+}
+
+a {
+    display: block;
+}
+
+a:focus-visible {
+    outline: none;
+}
+
+ul {
+    width: fit-content;
+    display: flex;
+    gap: var(--u-small);
+}
+
+li {
+    list-style: none;
+    margin: var(--u-small);
+}
+
+svg {
+    width: var(--u-large);
+    aspect-ratio: 1/1;
+}
+
+img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: var(--u-small);
+}
+
+/* Settings for the interaction of the icons */
+
+.social-media-icons a {
+    padding-bottom: var(--u-nano);
+    border-bottom: var(--u-nano) solid var(--o-primary-0);
+    transition: var(--a-default);
+}
+
+.social-media-icons a:focus {
+    border-bottom: var(--u-micro) solid var(--c-primary-50);
+}
+
+.social-media-icons a svg {
+    fill: var(--c-primary-100);
+    transition: var(--a-default);
+}
+
+.social-media-icons a:hover svg {
+    fill: var(--c-primary-50);
+}
+
+/* Layout */
+
+article {
+    height: 20em;
+    overflow: scroll;
+    margin-bottom: var(--u-default);
+    padding: var(--u-small);
+    padding-right: var(--u-default);
+    scrollbar-color: var(--c-primary-100) var(--c-light);
+    scrollbar-width: var(--u-nano);
+}
+
+article:focus-visible {
+    outline: none;
+}
+
+article:focus {
+    border-bottom: var(--u-micro) solid var(--c-primary-50);
+}
+
+.fullname {
+    padding: var(--u-default) 0;
+    gap: -0.5em
+}
+
+.fullname span h1{
+    width: fit-content;
+    display: flex;
+    background: -webkit-linear-gradient(var(--c-primary-50), var(--c-primary-100) 85%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fullname span:last-child h1 {
+    transform: translateX(var(--u-default));
+    background: -webkit-linear-gradient(var(--c-primary-100) 33%, var(--c-primary-50)); 
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* Settings for the businesscard */
+
+.business-card {
+    width: 100%;
+    aspect-ratio: 2/3;
+    border-radius: var(--u-small);
+    padding: 1em;
+    background: rgba(250, 250, 250, 0.66);
+    border: 4px solid rgba(250, 250, 250, 0.33);
+    backdrop-filter: blur(25px);
+}
+
+
+/* ----- Media queries ----- */
+
+@media (min-width: 30em) {
+
+}
+
+@media (min-width: 48em) {
+
+}
+
+@media (min-width: 60em) {
+
+}
+
+@media (min-width: 80em) {
+
+}
+  
+@media (min-width: 90em) {
+
+}
+
+@media (min-width: 100em) {
+
+}
