@@ -3,135 +3,28 @@
 <body>
   <header>
     <div>
-      <h1>Stefan van der Kort</h1>
+      <h1><%= member.name %> <%= member.prefix %> <%= member.surname %></h1>
     </div>
   </header>
-  <div class="top-bar">
-    <ul>
-      <a class="link" href="#over-mij">Info</a>
-      <a class="link" href="https://steefan.nl">Portfolio</a>
-      <a class="link" href="mailto:info@espant.com">Mail mij</a>
-    </ul>
-  </div>
+
+  <%- include('./partials/nav') %>
 
   <main>
     <div class="card__content">
       <div>
-        <h2 id="over-mij">Over mij</h2>
+        <h2 id="over-mij">Over <%= member.name %></h2>
         <p>
-          Mijn naam is Stefan van der Kort. 21 jaar oud,
-          geboren en getogen in het Zuid-Hollandse dorp
-          Lisse. Naast de opleiding FDND werk ik als
-          Teamleider bij mijn lokale Jumbo.
+          <%= member.bio.html %>
         </p>
       </div>
       <figure>
-        <img src="./assets/stefan.jpg" alt="Image description">
+        <img src=" <%= member.avatar %> " alt="Image description">
       </figure>
     </div>
-    <div class="card__content">
-      <div class="text">
-        <h2>Studies</h2>
-        <p>
-          Voor de HvA heb ik 5 jaar op het MBO gestudeerd.
-          De opleidingen die ik heb gevolgd waren:
-          Allround DTP'er aan de Dintelstraat en
-          Mediavormgever op de Contactweg. Beide aan het
-          Mediacollege Amsterdam.
-        </p>
-      </div>
-      <figure>
-        <img src="./assets/mediavormgever.jpg" alt="Image description">
-      </figure>
-    </div>
-    <div class="card__content">
-      <div class="text">
-        <h2>Passies</h2>
-        <p>
-          Buiten het vormgeven en coderen heb ik een grote
-          liefde voor auto’s. Specifiek van Duitse en
-          Italiaanse makelij. Merken als Audi, Alfa Romeo,
-          BMW, Mercedes en Volkswagen staan bij mij
-          bovenaan. Ook houd ik van vakanties en op reis
-          gaan.
-        </p>
-      </div>
-      <figure>
-        <img src="./assets/austria.jpg" alt="Image description">
-      </figure>
-    </div>
-    <div class="card__content">
-      <div class="text">
-        <h2>Toekomst</h2>
-        <p>
-          Sinds februari 2021 ben ik student-ondernemer en
-          ben ik eigenaar van mijn eigen bedrijf. Voor
-          2030 wil ik een eigen ontwerpstudio hebben waar
-          ik grafische en front-end gerelateerde
-          oplossingen bied voor bedrijf het beste uit hun
-          organisatie willen halen.
-        </p>
-      </div>
-      <figure>
-        <img src="./assets/kvk.jpg" alt="Image description">
-      </figure>
-    </div>
-    <div class="card__content">
-      <div class="text">
-        <h2>Contact</h2>
-        <h6>Neem contact op wat ik voor u kan bieden</h6>
-        <div class="contact">
-          <ul class="w-75">
-            <li>
-              <a class="link" href="mailto:info@espant.com">
-                info@espant.com
-              </a>
-            </li>
-            <li>
-              <a class="link" href="https://www.linkedin.com/in/stefan-van-der-kort-196513158/">
-                +31 6 33 90 02 93
-              </a>
-            </li>
-          </ul>
-          <ul class="w-25">
-            <li>
-              <a href="https://www.instagram.com/steef.media/">
-                <i class="fa fa-instagram socials"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/stefan-van-der-kort-196513158/">
-                <i class="fa fa-linkedin socials"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/Stefan-Espant">
-                <i class="fa fa-github socials"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <figure>
-        <img src="./assets/stefan-09-2022.jpg" alt="Image description">
-      </figure>
-    </div>
+
+    <%- include('./partials/socials') %>
+
   </main>
 
-  <aside>
-    <div class="bottom-bar">
-      <a href="https://www.instagram.com/steef.media/">
-        <i class="fa fa-instagram socials"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/stefan-van-der-kort-196513158/">
-        <i class="fa fa-linkedin socials"></i>
-      </a>
-      <a href="https://github.com/Stefan-Espant">
-        <i class="fa fa-github socials"></i>
-      </a>
-    </div>
-  </aside>
-
-</body>
 
 <%- include('./partials/foot') %>
