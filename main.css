@@ -1,0 +1,90 @@
+:root {
+    /* animation */
+
+    /*  */
+
+    /* color */
+    --c-light: #fafafa;
+    --c-primary-0: #ecf0f7;
+
+    /* color gradients */
+
+    /* layout (vw) */
+    --w-dix: 10vw;
+    --w-quarter: 25vw;  
+    --w-third: 33vw;
+    --w-half: 50vw;
+    --w-full: 100vw;
+
+    /* units (em) */
+    --u-micro: 0.25em;
+    --u-default: 0.5em;
+    --u-default: 1em;
+}
+
+@import url(https://use.typekit.net/ipr0bjj.css);
+
+@font-face {
+    font-family: "neuzeit-grotesk", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    src: local("neuzeit-grotesk-regular");
+}
+
+@font-face {
+    font-family: "neuzeit-grotesk", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    src: local("neuzeit-grotesk-bold");
+}
+
+/* General settings */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: "neuzeit-grotesk", serif;
+}
+
+body {
+    width: var(--w-full);
+    background-image: linear-gradient(to bottom right, var(--c-light), var(--c-primary-0) );
+    background-repeat: no-repeat;
+    padding: var(--u-default);
+    overflow: hidden;
+}
+
+
+/* Typography */
+
+h1 {
+    font-family: "neuzeit-grotesk", sans-serif;
+    font-weight: 700;
+    font-size: 2.5em;
+    background: -webkit-linear-gradient(#87CEFA, #26e 85%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    font-family: "neuzeit-grotesk", sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+    background: -webkit-linear-gradient(#87CEFA, #26e 85%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    font-family: "neuzeit-grotesk", sans-serif;
+    font-weight: 300;
+    font-size: 1.2em;
+    padding-left: var(--u-default);
+    color: #1f3561; 
+}
+
