@@ -3,6 +3,7 @@
   --a-quick: 0.2s;
   --a-default: 0.3s;
   --a-medium: 0.6s;
+  --a-large: 1s;
 
   /* color */
   --c-light: rgb(250, 250, 250);
@@ -138,6 +139,11 @@ button:hover {
   fill: var(--c-primary-100);
 }
 
+.dialog-comment-button {
+  animation: pop-in var(--a-medium) cubic-bezier(.5,-0.35,.56,1.33) forwards;
+  opacity: 0;
+}
+
 ul {
   width: fit-content;
   height: fit-content;
@@ -187,7 +193,7 @@ img {
 
 /* Layout */
 header {
-  animation: fade-up 1s cubic-bezier(.5,-0.35,.56,1.33) forwards;
+  animation: fade-up var(--a-large) cubic-bezier(.5,-0.35,.56,1.33) forwards;
   opacity: 0;
 }
 
@@ -226,7 +232,7 @@ footer {
   width: fit-content;
   padding: var(--u-default) 0;
   gap: -0.5em;
-  animation: fade-in 1s cubic-bezier(.5,-0.35,.56,1.33);
+  animation: fade-in var(--a-large) cubic-bezier(.5,-0.35,.56,1.33);
 }
 
 .fullname h1 {
@@ -335,7 +341,7 @@ input[type="submit"]:hover {
   border: 0.25em solid rgba(250, 250, 250, 0.33);
   opacity: 0;
   backdrop-filter: blur(25px);
-  animation: fade-up 1s 1s cubic-bezier(.5,-0.35,.56,1.33) forwards;
+  animation: fade-up var(--a-large) var(--a-large) cubic-bezier(.5,-0.35,.56,1.33) forwards;
 }
 
 /* Interaction */
@@ -370,23 +376,23 @@ input[type="submit"]:hover {
 }
 
 .comments article:nth-child(1) {
-  animation: fade-in 1s 1s ease-in forwards;
+  animation: fade-in var(--a-large) var(--a-large) ease-in forwards;
   opacity: 0;
   
 }
 
 .comments article:nth-child(2) {
-  animation: fade-in 1s 1.2s ease-in forwards;
+  animation: fade-in var(--a-large) 1.2s ease-in forwards;
   opacity: 0;
 }
 
 .comments article:nth-child(3) {
-  animation: fade-in 1s 1.5s ease-in forwards;
+  animation: fade-in var(--a-large) 1.5s ease-in forwards;
   opacity: 0;
 }
 
 .comments article:nth-child(4) {
-  animation: fade-in 1s 1.8s ease-in forwards;
+  animation: fade-in var(--a-large) 1.8s ease-in forwards;
   opacity: 0;
 }
 
@@ -473,6 +479,23 @@ input[type="submit"]:hover {
   
   100% {
     transform: translateX(30em);
+  }
+}
+
+@keyframes pop-in {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+
+  66% {
+    transform: scale(1.2);
+    opacity: 1;  
+  }
+
+  100% {
+    transform: scale(1.0);
+    opacity: 1;
   }
 }
 

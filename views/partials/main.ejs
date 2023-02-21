@@ -1,0 +1,26 @@
+<main>
+
+    <section class="fullname">
+            <h1 class="name"><%- member.name %></h1>
+            <h1 class="surname"><%- member.prefix %> <%- member.surname %></h1>
+    </section>
+    <section class="business-card">
+        <article>
+            <img src=" <%- member.avatar %> " alt="<%- member.name %> <%- member.prefix %> <%- member.surname %>" />
+        </article>
+        <article>
+            <h2><%- member.name %> <%- member.prefix %> <%- member.surname %></h2>
+            <p> <%- member.role %> <%- member.squads.name %> <%- member.squads.cohort %> </p>
+                <p><%- member.bio.html %></p>
+        </div>
+    </section>
+    <section class="comments">
+        <% member.shouts.forEach(shout => { %>
+            <article>
+              <h2><%= shout.author %></h2>
+              <p><%= shout.text %></p>
+            </article>
+            <% }) %>
+    </section>
+
+</main>
