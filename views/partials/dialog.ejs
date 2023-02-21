@@ -1,0 +1,11 @@
+<dialog class="dialog-comment">
+    <h2>Laat een reactie achter</h2>
+    <form action="/" method="post">
+        <input type="hidden" name="id" id="id" value="<%= member.id %>" />
+        <label for="author">Naam</label>
+        <input name="author" id="author" required>
+        <label for="text">Opmerking</label>
+        <textarea name="text" id="text" cols="30" rows="10" required></textarea>
+        <input type="submit" value="Verzenden" />
+    </form>
+  </dialog>

@@ -18,13 +18,14 @@ app.use(express.urlencoded({ extended: true }))
 // Gebruik de map 'public' voor statische resources
 app.use(express.static('public'))
 
-// Maak een route voor de index
+// Haalt informatie op uit de API
 app.get('/', async function (req, res) {
   const url = 'https://whois.fdnd.nl/api/v1/member/stefanvanderkort';
   const data = await fetch(url).then((response) => response.json());
   res.render('index', data);
 });
 
+// Verstuurd informatie naar de API met behulp van JSON
 app.post('/', function (request, response) {
   console.log(request.body)
   const headers = {
@@ -35,8 +36,10 @@ app.post('/', function (request, response) {
     method: 'POST',
     body: JSON.stringify(request.body),
   }
+  // Koppelt het systeem met de API
   const url = 'https://whois.fdnd.nl/api/v1/shout'
 
+  
   fetchJson(url, headers).then((data) => {
     response.redirect('/')
   })
@@ -51,6 +54,7 @@ app.listen(app.get('port'), function () {
   console.log(`Application started on http://localhost:${app.get('port')}`)
 })
 
+// 
 async function fetchJson(url, payload = {}) {
   return await fetch(url, payload)
     .then((response) => response.json())
