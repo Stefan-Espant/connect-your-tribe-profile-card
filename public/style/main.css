@@ -385,6 +385,12 @@ input[type="submit"]:hover {
   opacity: 0;
 }
 
+.comments article:nth-child(4) {
+  animation: fade-in 1s 1.8s ease-in forwards;
+  opacity: 0;
+}
+
+
 
 
 /* Custom scrollbar for the comments section */
