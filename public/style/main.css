@@ -344,6 +344,10 @@ input[type="submit"]:hover {
   animation: fade-up var(--a-large) var(--a-large) cubic-bezier(.5,-0.35,.56,1.33) forwards;
 }
 
+.business-card article:nth-of-type(2) {
+  padding-left: var(--u-default);
+}
+
 /* Interaction */
 .name {
   animation: name 3s 2s ease-in forwards;
