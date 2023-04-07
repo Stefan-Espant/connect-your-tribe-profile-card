@@ -23,8 +23,10 @@ https://itchy-pig-petticoat.cyclic.app/
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
 
 ## Installatie
+Voor dit project heb ik gebruik gemaakt van node en express. Hiervoor heb ik met de terminal in Visual Studio Code een aantal commando's voor gebruikt voor het initialiseren `npm init`, installeren `npm install` en testen `npm start`. In de map `node_modules` heb ik `nodemon` geactiveerd om bij iedere aanpassing die ik op heb geslagen de server te laten verversen. Hiervoor gebruikte ik het commando `npm install nodemon`.
 
 ## Gebruik
+Gebruikers kunnen op dit visitekaartje een comment/shout achterlaten d.m.v. een formulier.
 
 ## Bronnen
  https://neumorphism.io
