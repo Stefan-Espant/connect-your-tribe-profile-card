@@ -22,6 +22,45 @@ https://itchy-pig-petticoat.cyclic.app/
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
 
+### html
+In de `index.ejs` heb ik mijn code opgedeelt in verschillende routes die leiden naar de `/partials` map:
+
+```ejs
+<%- include('./partials/head') %>
+<% console.log(member) %>
+<body>
+
+    <%- include('./partials/header.ejs') %>
+
+    <%- include('./partials/main.ejs') %>
+
+    <%- include('./partials/dialog.ejs') %>
+
+<%- include('./partials/foot') %>
+```
+
+Om een shout/comment te plaatsen, opent een dialog die d.m.v. `dialog.ejs` word mogelijk gemaakt:
+
+```ejs
+<dialog class="dialog-comment">
+    <h2>Laat een reactie achter</h2>
+    <form action="/" method="post">
+        <input type="hidden" name="id" id="id" value="<%= member.id %>" />
+        <label for="author">Naam</label>
+        <input name="author" id="author" required>
+        <label for="text">Opmerking</label>
+        <textarea name="text" id="text" cols="30" rows="10" required></textarea>
+        <input type="submit" value="Verzenden" />
+    </form>
+  </dialog>
+```
+
+### css
+Tijdens het laden van de pagina 
+
+
+### javascript
+
 ## Installatie
 Voor dit project heb ik gebruik gemaakt van node en express. Hiervoor heb ik met de terminal in Visual Studio Code een aantal commando's voor gebruikt voor het initialiseren `npm init`, installeren `npm install` en testen `npm start`. In de map `node_modules` heb ik `nodemon` geactiveerd om bij iedere aanpassing die ik op heb geslagen de server te laten verversen. Hiervoor gebruikte ik het commando `npm install nodemon`.
 
