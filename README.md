@@ -60,6 +60,42 @@ Tijdens het laden van de pagina
 
 
 ### javascript
+Om het dialog te openen heb ik een functie geschreven in de clien-side javascript:
+
+```js
+
+const dialogCommentButton = document.querySelector(".dialog-comment-button");
+const dialogComment = document.querySelector(".dialog-comment");
+
+dialogCommentButton.addEventListener("click", function() {
+    dialogComment.showModal();
+});
+```
+
+### node
+Om het versturen van data in het formulier mogelijk te maken, heb ik in node, de `index.js`, een statement geschreven die de afhandeling naar de API mogelijk maakt:
+
+```js
+// Verstuurd informatie naar de API met behulp van JSON
+app.post('/', function (request, response) {
+  console.log(request.body)
+  const headers = {
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    method: 'POST',
+    body: JSON.stringify(request.body),
+  }
+  // Koppelt het systeem met de API
+  const url = 'https://whois.fdnd.nl/api/v1/shout'
+
+  
+  fetchJson(url, headers).then((data) => {
+    response.redirect('/')
+  })
+})
+```
 
 ## Installatie
 Voor dit project heb ik gebruik gemaakt van node en express. Hiervoor heb ik met de terminal in Visual Studio Code een aantal commando's voor gebruikt voor het initialiseren `npm init`, installeren `npm install` en testen `npm start`. In de map `node_modules` heb ik `nodemon` geactiveerd om bij iedere aanpassing die ik op heb geslagen de server te laten verversen. Hiervoor gebruikte ik het commando `npm install nodemon`.
